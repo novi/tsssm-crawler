@@ -73,7 +73,7 @@ extension Row.CollectStatus {
     
     public static func fetchOutdated(pool: ConnectionPool) throws -> [RSSID] {
         return try pool.execute { conn in
-            let res: [RSSIDResult] = try conn.query("SELECT rss.rss_id as rss_id FROM collect_status RIGHT JOIN rss ON rss.rss_id = collect_status.rss_id WHERE next_updates < now() OR next_updates IS NULL;")
+            let res: [RSSIDResult] = try conn.query("SELECT rss.rss_id as rss_id FROM collect_status RIGHT JOIN rss ON rss.rss_id = collect_status.rss_id WHERE next_updates < ? OR next_updates IS NULL;", [NSDate()])
             return res.map{ $0.rssID }
         }
     }

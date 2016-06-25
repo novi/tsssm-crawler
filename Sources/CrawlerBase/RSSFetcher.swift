@@ -23,15 +23,15 @@ public struct RSSFetcher {
     }
     
     public func fetchAndParse() throws -> [Article] {
-        return try parseRSS2(data: fetch())
+        return try parseRSS2(xml: fetch())
     }
     
-    internal func fetch() throws -> NSData {
-        fatalError()
+    internal func fetch() throws -> String {
+        return try HTTPClient().get(url: url)
     }
     
-    internal func parseRSS2(data: NSData) throws -> [Article] {
-        let doc = try NSXMLDocument(data: data, options: 0)
+    internal func parseRSS2(xml: String) throws -> [Article] {
+        let doc = try NSXMLDocument(xmlString: xml, options: NSXMLDocumentTidyXML)
         guard let root = doc.rootElement() else {
             throw FetcherError.noRootElement
         }

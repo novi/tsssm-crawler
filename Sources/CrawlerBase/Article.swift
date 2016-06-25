@@ -49,6 +49,7 @@ extension Row.Article: QueryParameterDictionaryType {
     
     public func saveOrIgnore(conn: Connection) throws {
         let status: QueryStatus = try conn.query("INSERT IGNORE INTO articles SET ? ", [self])
+        print("saveOrIgnore, \(status)")
     }
 }
 

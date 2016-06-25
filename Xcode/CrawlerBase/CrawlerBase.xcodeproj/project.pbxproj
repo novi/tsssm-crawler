@@ -9,13 +9,15 @@
 /* Begin PBXBuildFile section */
 		522115F71D1EA4E800199B76 /* CrawlerBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 522115F61D1EA4E800199B76 /* CrawlerBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		522115FE1D1EA4E800199B76 /* CrawlerBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522115F31D1EA4E800199B76 /* CrawlerBase.framework */; };
-		522116031D1EA4E800199B76 /* CrawlerBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522116021D1EA4E800199B76 /* CrawlerBaseTests.swift */; };
 		5221160F1D1EA53F00199B76 /* RSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221160E1D1EA53F00199B76 /* RSS.swift */; };
 		5221161B1D1EA7A300199B76 /* MySQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522116171D1EA58700199B76 /* MySQL.framework */; };
 		52411DFF1D1EA88E008BB970 /* IDType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411DFE1D1EA88E008BB970 /* IDType.swift */; };
 		52411E011D1EAB4F008BB970 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E001D1EAB4F008BB970 /* Article.swift */; };
 		52411E031D1EAD58008BB970 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E021D1EAD58008BB970 /* Status.swift */; };
 		52411E8C1D1ED2F5008BB970 /* RSSFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E8B1D1ED2F5008BB970 /* RSSFetcher.swift */; };
+		52411E8E1D1EDE24008BB970 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E8D1D1EDE24008BB970 /* HTTPClient.swift */; };
+		52411E901D1EDE44008BB970 /* HTTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E8F1D1EDE44008BB970 /* HTTPTests.swift */; };
+		52411E9E1D1EDF48008BB970 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411E981D1EDEDD008BB970 /* Socket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,27 @@
 			remoteGlobalIDString = 529215911BDB8CD6009B031A;
 			remoteInfo = MySQLTests;
 		};
+		52411E971D1EDEDD008BB970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52411E911D1EDEDD008BB970 /* BlueSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C0F4BF61C4E84CC008B2B0A;
+			remoteInfo = Socket;
+		};
+		52411E991D1EDEDD008BB970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52411E911D1EDEDD008BB970 /* BlueSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8CC36E021C4EA1BE00BAA659;
+			remoteInfo = "Socket-iOS";
+		};
+		52411E9B1D1EDEDD008BB970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52411E911D1EDEDD008BB970 /* BlueSocket.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8CA9B1631C98A00400E607FB;
+			remoteInfo = SocketTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +70,6 @@
 		522115F61D1EA4E800199B76 /* CrawlerBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrawlerBase.h; sourceTree = "<group>"; };
 		522115F81D1EA4E800199B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		522115FD1D1EA4E800199B76 /* CrawlerBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrawlerBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		522116021D1EA4E800199B76 /* CrawlerBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlerBaseTests.swift; sourceTree = "<group>"; };
 		522116041D1EA4E800199B76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5221160E1D1EA53F00199B76 /* RSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSS.swift; sourceTree = "<group>"; };
 		522116101D1EA58700199B76 /* MySQL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MySQL.xcodeproj; path = "../../External/MySQL/OSX Projects/MySQL/MySQL.xcodeproj"; sourceTree = "<group>"; };
@@ -55,6 +77,9 @@
 		52411E001D1EAB4F008BB970 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		52411E021D1EAD58008BB970 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		52411E8B1D1ED2F5008BB970 /* RSSFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFetcher.swift; sourceTree = "<group>"; };
+		52411E8D1D1EDE24008BB970 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		52411E8F1D1EDE44008BB970 /* HTTPTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTests.swift; sourceTree = "<group>"; };
+		52411E911D1EDEDD008BB970 /* BlueSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlueSocket.xcodeproj; path = ../../External/BlueSocket/BlueSocket.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52411E9E1D1EDF48008BB970 /* Socket.framework in Frameworks */,
 				5221161B1D1EA7A300199B76 /* MySQL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +106,7 @@
 		522115E91D1EA4E800199B76 = {
 			isa = PBXGroup;
 			children = (
+				52411E911D1EDEDD008BB970 /* BlueSocket.xcodeproj */,
 				522116101D1EA58700199B76 /* MySQL.xcodeproj */,
 				522115F51D1EA4E800199B76 /* CrawlerBase */,
 				522116011D1EA4E800199B76 /* CrawlerBaseTests */,
@@ -109,7 +136,7 @@
 		522116011D1EA4E800199B76 /* CrawlerBaseTests */ = {
 			isa = PBXGroup;
 			children = (
-				522116021D1EA4E800199B76 /* CrawlerBaseTests.swift */,
+				52411E8F1D1EDE44008BB970 /* HTTPTests.swift */,
 				522116041D1EA4E800199B76 /* Info.plist */,
 			);
 			path = CrawlerBaseTests;
@@ -123,6 +150,7 @@
 				52411E001D1EAB4F008BB970 /* Article.swift */,
 				52411E021D1EAD58008BB970 /* Status.swift */,
 				52411E8B1D1ED2F5008BB970 /* RSSFetcher.swift */,
+				52411E8D1D1EDE24008BB970 /* HTTPClient.swift */,
 			);
 			name = CrawlerBase;
 			path = ../../../Sources/CrawlerBase;
@@ -133,6 +161,16 @@
 			children = (
 				522116171D1EA58700199B76 /* MySQL.framework */,
 				522116191D1EA58700199B76 /* MySQLTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52411E921D1EDEDD008BB970 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52411E981D1EDEDD008BB970 /* Socket.framework */,
+				52411E9A1D1EDEDD008BB970 /* BlueSocket.framework */,
+				52411E9C1D1EDEDD008BB970 /* SocketTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,6 +262,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 52411E921D1EDEDD008BB970 /* Products */;
+					ProjectRef = 52411E911D1EDEDD008BB970 /* BlueSocket.xcodeproj */;
+				},
+				{
 					ProductGroup = 522116111D1EA58700199B76 /* Products */;
 					ProjectRef = 522116101D1EA58700199B76 /* MySQL.xcodeproj */;
 				},
@@ -249,6 +291,27 @@
 			fileType = wrapper.cfbundle;
 			path = MySQLTests.xctest;
 			remoteRef = 522116181D1EA58700199B76 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52411E981D1EDEDD008BB970 /* Socket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Socket.framework;
+			remoteRef = 52411E971D1EDEDD008BB970 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52411E9A1D1EDEDD008BB970 /* BlueSocket.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = BlueSocket.framework;
+			remoteRef = 52411E991D1EDEDD008BB970 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52411E9C1D1EDEDD008BB970 /* SocketTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SocketTests.xctest;
+			remoteRef = 52411E9B1D1EDEDD008BB970 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -277,6 +340,7 @@
 			files = (
 				52411E8C1D1ED2F5008BB970 /* RSSFetcher.swift in Sources */,
 				52411DFF1D1EA88E008BB970 /* IDType.swift in Sources */,
+				52411E8E1D1EDE24008BB970 /* HTTPClient.swift in Sources */,
 				5221160F1D1EA53F00199B76 /* RSS.swift in Sources */,
 				52411E011D1EAB4F008BB970 /* Article.swift in Sources */,
 				52411E031D1EAD58008BB970 /* Status.swift in Sources */,
@@ -287,7 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				522116031D1EA4E800199B76 /* CrawlerBaseTests.swift in Sources */,
+				52411E901D1EDE44008BB970 /* HTTPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

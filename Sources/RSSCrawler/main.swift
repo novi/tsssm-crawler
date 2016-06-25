@@ -25,6 +25,8 @@ while true {
         exit(0) // exit gracefully
     }
     
+    print("waiting for RSS")
+    
     // fetch RSSs to crawl
     let rssIDs = try Row.CollectStatus.fetchOutdated(pool: pool)
     
@@ -44,6 +46,7 @@ while true {
                 try Row.CollectStatus.updateLatestStatus(rssID: rssID, status: .success, conn: conn) // mark the rss as successful
             }
         } catch {
+            print(error)
             // crawl failed, set status
             try pool.execute { conn in
                 try Row.CollectStatus.updateLatestStatus(rssID: rssID, status: .failure("\(error)"), conn: conn)
