@@ -23,14 +23,22 @@ final class HTTPClient {
     func get(url: NSURL) throws -> String {
         let socket = try Socket.create()
         try socket.connect(to: url.host!, port: url.port?.int32Value ?? 80 )
-        try socket.write(from: "GET \(url.path!) HTTP/1.1\nHost: \(url.host!)\r\n\r\n")
-        return try parse(response: socket.readString() ?? "").1
+        try socket.write(from: "GET \(url.path!) HTTP/1.1\nHost: \(url.host!)\nConnection: close\n\r\n\r\n")
+        var readString = ""
+        while true {
+            let chunk = (try? socket.readString() ?? "") ?? ""
+            if chunk.characters.count == 0 {
+                break
+            }
+            readString += chunk
+        }
+        return try parse(response: readString).1
     }
     
     private func parse(response: String) throws -> (Int, String) { // status code, body
         var lines = response.characters.split(separator: "\r\n", maxSplits: Int.max, omittingEmptySubsequences: false).map(String.init)
         
-        //print(lines)
+        //print(response, lines)
         
         // parse status code
         guard let statusLine = lines.first else {

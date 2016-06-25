@@ -38,6 +38,8 @@ while true {
             // send request for RSS
             let articles = try RSSFetcher(rssURL: rss.url).fetchAndParse()
             
+            print("fetched count \(articles.count)")
+            
             // save parsed articles
             try pool.transaction { conn in
                 for article in articles {
