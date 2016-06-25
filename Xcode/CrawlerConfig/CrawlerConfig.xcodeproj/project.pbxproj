@@ -8,20 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		52411E241D1ECD60008BB970 /* CrawlerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 52411E231D1ECD60008BB970 /* CrawlerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52411E2B1D1ECD60008BB970 /* CrawlerConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411E201D1ECD60008BB970 /* CrawlerConfig.framework */; };
-		52411E301D1ECD60008BB970 /* CrawlerConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E2F1D1ECD60008BB970 /* CrawlerConfigTests.swift */; };
 		52411E451D1ECD96008BB970 /* MySQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411E421D1ECD88008BB970 /* MySQL.framework */; };
 		52411E481D1ECDBA008BB970 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E471D1ECDBA008BB970 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		52411E2C1D1ECD60008BB970 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 52411E171D1ECD60008BB970 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 52411E1F1D1ECD60008BB970;
-			remoteInfo = CrawlerConfig;
-		};
 		52411E411D1ECD88008BB970 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 52411E3C1D1ECD88008BB970 /* MySQL.xcodeproj */;
@@ -42,9 +33,6 @@
 		52411E201D1ECD60008BB970 /* CrawlerConfig.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CrawlerConfig.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52411E231D1ECD60008BB970 /* CrawlerConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrawlerConfig.h; sourceTree = "<group>"; };
 		52411E251D1ECD60008BB970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52411E2A1D1ECD60008BB970 /* CrawlerConfigTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrawlerConfigTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		52411E2F1D1ECD60008BB970 /* CrawlerConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrawlerConfigTests.swift; sourceTree = "<group>"; };
-		52411E311D1ECD60008BB970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52411E3C1D1ECD88008BB970 /* MySQL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MySQL.xcodeproj; path = "../../External/MySQL/OSX Projects/MySQL/MySQL.xcodeproj"; sourceTree = "<group>"; };
 		52411E471D1ECDBA008BB970 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,14 +46,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52411E271D1ECD60008BB970 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52411E2B1D1ECD60008BB970 /* CrawlerConfig.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -74,7 +54,6 @@
 			children = (
 				52411E3C1D1ECD88008BB970 /* MySQL.xcodeproj */,
 				52411E221D1ECD60008BB970 /* CrawlerConfig */,
-				52411E2E1D1ECD60008BB970 /* CrawlerConfigTests */,
 				52411E211D1ECD60008BB970 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,7 +62,6 @@
 			isa = PBXGroup;
 			children = (
 				52411E201D1ECD60008BB970 /* CrawlerConfig.framework */,
-				52411E2A1D1ECD60008BB970 /* CrawlerConfigTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,15 +74,6 @@
 				52411E251D1ECD60008BB970 /* Info.plist */,
 			);
 			path = CrawlerConfig;
-			sourceTree = "<group>";
-		};
-		52411E2E1D1ECD60008BB970 /* CrawlerConfigTests */ = {
-			isa = PBXGroup;
-			children = (
-				52411E2F1D1ECD60008BB970 /* CrawlerConfigTests.swift */,
-				52411E311D1ECD60008BB970 /* Info.plist */,
-			);
-			path = CrawlerConfigTests;
 			sourceTree = "<group>";
 		};
 		52411E3D1D1ECD88008BB970 /* Products */ = {
@@ -157,24 +126,6 @@
 			productReference = 52411E201D1ECD60008BB970 /* CrawlerConfig.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		52411E291D1ECD60008BB970 /* CrawlerConfigTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 52411E371D1ECD60008BB970 /* Build configuration list for PBXNativeTarget "CrawlerConfigTests" */;
-			buildPhases = (
-				52411E261D1ECD60008BB970 /* Sources */,
-				52411E271D1ECD60008BB970 /* Frameworks */,
-				52411E281D1ECD60008BB970 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				52411E2D1D1ECD60008BB970 /* PBXTargetDependency */,
-			);
-			name = CrawlerConfigTests;
-			productName = CrawlerConfigTests;
-			productReference = 52411E2A1D1ECD60008BB970 /* CrawlerConfigTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -186,9 +137,6 @@
 				ORGANIZATIONNAME = "Yusuke Ito";
 				TargetAttributes = {
 					52411E1F1D1ECD60008BB970 = {
-						CreatedOnToolsVersion = 7.3.1;
-					};
-					52411E291D1ECD60008BB970 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -212,7 +160,6 @@
 			projectRoot = "";
 			targets = (
 				52411E1F1D1ECD60008BB970 /* CrawlerConfig */,
-				52411E291D1ECD60008BB970 /* CrawlerConfigTests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,13 +189,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52411E281D1ECD60008BB970 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -260,23 +200,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		52411E261D1ECD60008BB970 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				52411E301D1ECD60008BB970 /* CrawlerConfigTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		52411E2D1D1ECD60008BB970 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 52411E1F1D1ECD60008BB970 /* CrawlerConfig */;
-			targetProxy = 52411E2C1D1ECD60008BB970 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		52411E321D1ECD60008BB970 /* Debug */ = {
@@ -414,28 +338,6 @@
 			};
 			name = Release;
 		};
-		52411E381D1ECD60008BB970 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = CrawlerConfigTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.CrawlerConfigTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		52411E391D1ECD60008BB970 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = CrawlerConfigTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.CrawlerConfigTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -453,15 +355,6 @@
 			buildConfigurations = (
 				52411E351D1ECD60008BB970 /* Debug */,
 				52411E361D1ECD60008BB970 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		52411E371D1ECD60008BB970 /* Build configuration list for PBXNativeTarget "CrawlerConfigTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				52411E381D1ECD60008BB970 /* Debug */,
-				52411E391D1ECD60008BB970 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

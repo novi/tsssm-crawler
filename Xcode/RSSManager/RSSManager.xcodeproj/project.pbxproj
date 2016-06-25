@@ -1,0 +1,374 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52411EB71D1F50A1008BB970 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EB61D1F50A1008BB970 /* AppDelegate.swift */; };
+		52411EB91D1F50A1008BB970 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EB81D1F50A1008BB970 /* ViewController.swift */; };
+		52411EBB1D1F50A1008BB970 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52411EBA1D1F50A1008BB970 /* Assets.xcassets */; };
+		52411EBE1D1F50A1008BB970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52411EBC1D1F50A1008BB970 /* Main.storyboard */; };
+		52411EDA1D1F50E2008BB970 /* CrawlerBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411ED11D1F50D2008BB970 /* CrawlerBase.framework */; };
+		52411EDB1D1F50E2008BB970 /* CrawlerConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411ED91D1F50D9008BB970 /* CrawlerConfig.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52411ED01D1F50D2008BB970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52411ECB1D1F50D2008BB970 /* CrawlerBase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 522115F31D1EA4E800199B76;
+			remoteInfo = CrawlerBase;
+		};
+		52411ED21D1F50D2008BB970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52411ECB1D1F50D2008BB970 /* CrawlerBase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 522115FD1D1EA4E800199B76;
+			remoteInfo = CrawlerBaseTests;
+		};
+		52411ED81D1F50D9008BB970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52411ED41D1F50D9008BB970 /* CrawlerConfig.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52411E201D1ECD60008BB970;
+			remoteInfo = CrawlerConfig;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52411EB31D1F50A1008BB970 /* RSSManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52411EB61D1F50A1008BB970 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		52411EB81D1F50A1008BB970 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		52411EBA1D1F50A1008BB970 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		52411EBD1D1F50A1008BB970 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		52411EBF1D1F50A1008BB970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52411ECB1D1F50D2008BB970 /* CrawlerBase.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CrawlerBase.xcodeproj; path = ../CrawlerBase/CrawlerBase.xcodeproj; sourceTree = "<group>"; };
+		52411ED41D1F50D9008BB970 /* CrawlerConfig.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CrawlerConfig.xcodeproj; path = ../CrawlerConfig/CrawlerConfig.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52411EB01D1F50A1008BB970 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52411EDA1D1F50E2008BB970 /* CrawlerBase.framework in Frameworks */,
+				52411EDB1D1F50E2008BB970 /* CrawlerConfig.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52411EAA1D1F50A0008BB970 = {
+			isa = PBXGroup;
+			children = (
+				52411ED41D1F50D9008BB970 /* CrawlerConfig.xcodeproj */,
+				52411ECB1D1F50D2008BB970 /* CrawlerBase.xcodeproj */,
+				52411EB51D1F50A1008BB970 /* RSSManager */,
+				52411EB41D1F50A1008BB970 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52411EB41D1F50A1008BB970 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52411EB31D1F50A1008BB970 /* RSSManager.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52411EB51D1F50A1008BB970 /* RSSManager */ = {
+			isa = PBXGroup;
+			children = (
+				52411EDC1D1F512B008BB970 /* ViewControllers */,
+				52411EB61D1F50A1008BB970 /* AppDelegate.swift */,
+				52411EB81D1F50A1008BB970 /* ViewController.swift */,
+				52411EBA1D1F50A1008BB970 /* Assets.xcassets */,
+				52411EBC1D1F50A1008BB970 /* Main.storyboard */,
+				52411EBF1D1F50A1008BB970 /* Info.plist */,
+			);
+			path = RSSManager;
+			sourceTree = "<group>";
+		};
+		52411ECC1D1F50D2008BB970 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52411ED11D1F50D2008BB970 /* CrawlerBase.framework */,
+				52411ED31D1F50D2008BB970 /* CrawlerBaseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52411ED51D1F50D9008BB970 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52411ED91D1F50D9008BB970 /* CrawlerConfig.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52411EDC1D1F512B008BB970 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52411EB21D1F50A1008BB970 /* RSSManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52411EC21D1F50A1008BB970 /* Build configuration list for PBXNativeTarget "RSSManager" */;
+			buildPhases = (
+				52411EAF1D1F50A1008BB970 /* Sources */,
+				52411EB01D1F50A1008BB970 /* Frameworks */,
+				52411EB11D1F50A1008BB970 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSSManager;
+			productName = RSSManager;
+			productReference = 52411EB31D1F50A1008BB970 /* RSSManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52411EAB1D1F50A0008BB970 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Yusuke Ito";
+				TargetAttributes = {
+					52411EB21D1F50A1008BB970 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 52411EAE1D1F50A0008BB970 /* Build configuration list for PBXProject "RSSManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 52411EAA1D1F50A0008BB970;
+			productRefGroup = 52411EB41D1F50A1008BB970 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 52411ECC1D1F50D2008BB970 /* Products */;
+					ProjectRef = 52411ECB1D1F50D2008BB970 /* CrawlerBase.xcodeproj */;
+				},
+				{
+					ProductGroup = 52411ED51D1F50D9008BB970 /* Products */;
+					ProjectRef = 52411ED41D1F50D9008BB970 /* CrawlerConfig.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				52411EB21D1F50A1008BB970 /* RSSManager */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		52411ED11D1F50D2008BB970 /* CrawlerBase.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CrawlerBase.framework;
+			remoteRef = 52411ED01D1F50D2008BB970 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52411ED31D1F50D2008BB970 /* CrawlerBaseTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CrawlerBaseTests.xctest;
+			remoteRef = 52411ED21D1F50D2008BB970 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52411ED91D1F50D9008BB970 /* CrawlerConfig.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CrawlerConfig.framework;
+			remoteRef = 52411ED81D1F50D9008BB970 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		52411EB11D1F50A1008BB970 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52411EBB1D1F50A1008BB970 /* Assets.xcassets in Resources */,
+				52411EBE1D1F50A1008BB970 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52411EAF1D1F50A1008BB970 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52411EB91D1F50A1008BB970 /* ViewController.swift in Sources */,
+				52411EB71D1F50A1008BB970 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		52411EBC1D1F50A1008BB970 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				52411EBD1D1F50A1008BB970 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		52411EC01D1F50A1008BB970 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52411EC11D1F50A1008BB970 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		52411EC31D1F50A1008BB970 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RSSManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.RSSManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		52411EC41D1F50A1008BB970 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RSSManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.RSSManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52411EAE1D1F50A0008BB970 /* Build configuration list for PBXProject "RSSManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52411EC01D1F50A1008BB970 /* Debug */,
+				52411EC11D1F50A1008BB970 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52411EC21D1F50A1008BB970 /* Build configuration list for PBXNativeTarget "RSSManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52411EC31D1F50A1008BB970 /* Debug */,
+				52411EC41D1F50A1008BB970 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52411EAB1D1F50A0008BB970 /* Project object */;
+}
