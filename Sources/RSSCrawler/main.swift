@@ -35,7 +35,7 @@ while true {
             // fetch URL of the RSS
             let rss = try Row.RSS.fetch(byID: rssID, pool: pool)
             
-            // send request for RSS
+            // send request for the RSS
             let articles = try RSSFetcher(rssURL: rss.url).fetchAndParse()
             
             print("fetched count \(articles.count)")
@@ -45,7 +45,7 @@ while true {
                 for article in articles {
                     try Row.Article.makeForInsert(rss: article, forRSSID: rssID).saveOrIgnore(conn: conn)
                 }
-                try Row.CollectStatus.updateLatestStatus(rssID: rssID, status: .success, conn: conn) // mark the rss as successful
+                try Row.CollectStatus.updateLatestStatus(rssID: rssID, status: .success, conn: conn) // mark the RSS as successful
             }
         } catch {
             print(error)

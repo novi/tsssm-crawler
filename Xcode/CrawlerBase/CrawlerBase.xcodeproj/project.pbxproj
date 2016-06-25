@@ -16,9 +16,10 @@
 		52411E031D1EAD58008BB970 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E021D1EAD58008BB970 /* Status.swift */; };
 		52411E8C1D1ED2F5008BB970 /* RSSFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E8B1D1ED2F5008BB970 /* RSSFetcher.swift */; };
 		52411E8E1D1EDE24008BB970 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E8D1D1EDE24008BB970 /* HTTPClient.swift */; };
-		52411E901D1EDE44008BB970 /* HTTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E8F1D1EDE44008BB970 /* HTTPTests.swift */; };
 		52411E9E1D1EDF48008BB970 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411E981D1EDEDD008BB970 /* Socket.framework */; };
-		52411EA01D1F3B44008BB970 /* RSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E9F1D1F3B44008BB970 /* RSSTests.swift */; };
+		52411EA41D1F4DAE008BB970 /* HTTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EA21D1F4DAE008BB970 /* HTTPTests.swift */; };
+		52411EA51D1F4DAE008BB970 /* RSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EA31D1F4DAE008BB970 /* RSSTests.swift */; };
+		52411EA91D1F4EE6008BB970 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EA81D1F4EE6008BB970 /* XCTestManifests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,9 +80,11 @@
 		52411E021D1EAD58008BB970 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		52411E8B1D1ED2F5008BB970 /* RSSFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFetcher.swift; sourceTree = "<group>"; };
 		52411E8D1D1EDE24008BB970 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		52411E8F1D1EDE44008BB970 /* HTTPTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTests.swift; sourceTree = "<group>"; };
 		52411E911D1EDEDD008BB970 /* BlueSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BlueSocket.xcodeproj; path = ../../External/BlueSocket/BlueSocket.xcodeproj; sourceTree = "<group>"; };
-		52411E9F1D1F3B44008BB970 /* RSSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSTests.swift; sourceTree = "<group>"; };
+		52411EA21D1F4DAE008BB970 /* HTTPTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTests.swift; sourceTree = "<group>"; };
+		52411EA31D1F4DAE008BB970 /* RSSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSTests.swift; sourceTree = "<group>"; };
+		52411EA61D1F4E7B008BB970 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LinuxMain.swift; path = ../../../Tests/LinuxMain.swift; sourceTree = "<group>"; };
+		52411EA81D1F4EE6008BB970 /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,8 +141,8 @@
 		522116011D1EA4E800199B76 /* CrawlerBaseTests */ = {
 			isa = PBXGroup;
 			children = (
-				52411E8F1D1EDE44008BB970 /* HTTPTests.swift */,
-				52411E9F1D1F3B44008BB970 /* RSSTests.swift */,
+				52411EA61D1F4E7B008BB970 /* LinuxMain.swift */,
+				52411EA11D1F4DAE008BB970 /* CrawlerBase */,
 				522116041D1EA4E800199B76 /* Info.plist */,
 			);
 			path = CrawlerBaseTests;
@@ -176,6 +179,17 @@
 				52411E9C1D1EDEDD008BB970 /* SocketTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		52411EA11D1F4DAE008BB970 /* CrawlerBase */ = {
+			isa = PBXGroup;
+			children = (
+				52411EA81D1F4EE6008BB970 /* XCTestManifests.swift */,
+				52411EA21D1F4DAE008BB970 /* HTTPTests.swift */,
+				52411EA31D1F4DAE008BB970 /* RSSTests.swift */,
+			);
+			name = CrawlerBase;
+			path = ../../../Tests/CrawlerBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,8 +368,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52411EA01D1F3B44008BB970 /* RSSTests.swift in Sources */,
-				52411E901D1EDE44008BB970 /* HTTPTests.swift in Sources */,
+				52411EA51D1F4DAE008BB970 /* RSSTests.swift in Sources */,
+				52411EA41D1F4DAE008BB970 /* HTTPTests.swift in Sources */,
+				52411EA91D1F4EE6008BB970 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

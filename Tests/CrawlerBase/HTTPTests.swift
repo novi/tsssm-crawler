@@ -10,6 +10,16 @@ import Foundation
 import XCTest
 @testable import CrawlerBase
 
+
+extension HTTPTests {
+    static var allTests : [(String, (HTTPTests) -> () throws -> Void)] {
+        return [
+            ("testSimpleRequest", testSimpleRequest)
+        ]
+    }
+}
+
+
 class HTTPTests: XCTestCase {
     
     func testSimpleRequest() throws {

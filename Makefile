@@ -22,7 +22,7 @@ debug: build_;
 build_:
 	$(SWIFT) build -v --configuration $(CONF_ENV) $(BUILDOPTS) -Xswiftc -DSWIFT3_DEV
 
-test: build
+test: debug
 	$(SWIFT) test
 	
 clean:
