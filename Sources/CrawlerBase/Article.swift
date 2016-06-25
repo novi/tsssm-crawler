@@ -27,7 +27,8 @@ extension Row {
                                link: NSURL.from(string: r <| "link"),
                                guid: r <| "guid",
                                description: r <| "description",
-                               publishedAt: (r <| "published_at" as SQLDate).date())
+                               publishedAt: (r <| "published_at" as SQLDate).date()
+            )
         }
     }
 }

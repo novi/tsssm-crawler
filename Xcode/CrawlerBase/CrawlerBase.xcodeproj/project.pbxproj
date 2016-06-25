@@ -14,6 +14,7 @@
 		5221161B1D1EA7A300199B76 /* MySQL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522116171D1EA58700199B76 /* MySQL.framework */; };
 		52411DFF1D1EA88E008BB970 /* IDType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411DFE1D1EA88E008BB970 /* IDType.swift */; };
 		52411E011D1EAB4F008BB970 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E001D1EAB4F008BB970 /* Article.swift */; };
+		52411E031D1EAD58008BB970 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E021D1EAD58008BB970 /* Status.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		522116101D1EA58700199B76 /* MySQL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = MySQL.xcodeproj; path = "../../External/MySQL/OSX Projects/MySQL/MySQL.xcodeproj"; sourceTree = "<group>"; };
 		52411DFE1D1EA88E008BB970 /* IDType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDType.swift; sourceTree = "<group>"; };
 		52411E001D1EAB4F008BB970 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		52411E021D1EAD58008BB970 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				52411DFE1D1EA88E008BB970 /* IDType.swift */,
 				5221160E1D1EA53F00199B76 /* RSS.swift */,
 				52411E001D1EAB4F008BB970 /* Article.swift */,
+				52411E021D1EAD58008BB970 /* Status.swift */,
 			);
 			name = CrawlerBase;
 			path = ../../../Sources/CrawlerBase;
@@ -272,6 +275,7 @@
 				52411DFF1D1EA88E008BB970 /* IDType.swift in Sources */,
 				5221160F1D1EA53F00199B76 /* RSS.swift in Sources */,
 				52411E011D1EAB4F008BB970 /* Article.swift in Sources */,
+				52411E031D1EAD58008BB970 /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

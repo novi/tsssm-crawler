@@ -33,7 +33,8 @@ enum Row {
             return try RSS(rssID: r <| "rss_id",
                            title: r <| "title",
                            url: NSURL.from(string: r <| "url"),
-                           createdAt: (r <| "created_at" as SQLDate).date())
+                           createdAt: (r <| "created_at" as SQLDate).date()
+            )
         }
     }
 }
