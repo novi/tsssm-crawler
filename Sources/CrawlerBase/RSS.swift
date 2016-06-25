@@ -22,14 +22,14 @@ extension NSURL {
     }
 }
 
-enum Row {
+public enum Row {
     
-    struct RSS: QueryRowResultType {
+    public struct RSS: QueryRowResultType {
         let rssID: RSSID // TODO: auto increment type
         let title: String
-        let url: NSURL
+        public let url: NSURL
         let createdAt: NSDate
-        static func decodeRow(r: QueryRowResult) throws -> RSS {
+        public static func decodeRow(r: QueryRowResult) throws -> RSS {
             return try RSS(rssID: r <| "rss_id",
                            title: r <| "title",
                            url: NSURL.from(string: r <| "url"),
@@ -40,13 +40,30 @@ enum Row {
 }
 
 extension Row.RSS: QueryParameterDictionaryType {
-    func queryParameter() throws -> QueryDictionary {
+    public func queryParameter() throws -> QueryDictionary {
         return QueryDictionary([
             //"rss_id": rssID, auto increment
             "title": title,
             "url": url.absoluteString,
             "created_at": createdAt
         ])
+    }
+}
+
+extension Row.RSS {
+    
+    public enum Error: ErrorProtocol {
+        case noRSS(RSSID)
+    }
+    
+    public static func fetch(byID rssID: RSSID, pool: ConnectionPool) throws -> Row.RSS {
+        let rss: [Row.RSS] = try pool.execute { conn in
+            try conn.query("SELECT rss_id,title,url,created_at FROM rss WHERE rss_id = ? LIMIT 1", [rssID])
+        }
+        guard let first = rss.first else {
+            throw Error.noRSS(rssID)
+        }
+        return first
     }
 }
 

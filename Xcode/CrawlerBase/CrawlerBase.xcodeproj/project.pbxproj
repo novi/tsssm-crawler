@@ -15,6 +15,7 @@
 		52411DFF1D1EA88E008BB970 /* IDType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411DFE1D1EA88E008BB970 /* IDType.swift */; };
 		52411E011D1EAB4F008BB970 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E001D1EAB4F008BB970 /* Article.swift */; };
 		52411E031D1EAD58008BB970 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E021D1EAD58008BB970 /* Status.swift */; };
+		52411E8C1D1ED2F5008BB970 /* RSSFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E8B1D1ED2F5008BB970 /* RSSFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		52411DFE1D1EA88E008BB970 /* IDType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDType.swift; sourceTree = "<group>"; };
 		52411E001D1EAB4F008BB970 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		52411E021D1EAD58008BB970 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		52411E8B1D1ED2F5008BB970 /* RSSFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				5221160E1D1EA53F00199B76 /* RSS.swift */,
 				52411E001D1EAB4F008BB970 /* Article.swift */,
 				52411E021D1EAD58008BB970 /* Status.swift */,
+				52411E8B1D1ED2F5008BB970 /* RSSFetcher.swift */,
 			);
 			name = CrawlerBase;
 			path = ../../../Sources/CrawlerBase;
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52411E8C1D1ED2F5008BB970 /* RSSFetcher.swift in Sources */,
 				52411DFF1D1EA88E008BB970 /* IDType.swift in Sources */,
 				5221160F1D1EA53F00199B76 /* RSS.swift in Sources */,
 				52411E011D1EAB4F008BB970 /* Article.swift in Sources */,
@@ -337,6 +341,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/mysql,
+					/usr/local/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -381,6 +389,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/mysql,
+					/usr/local/include,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -400,10 +412,6 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = (
-					/usr/local/include/mysql,
-					/usr/local/include,
-				);
 				INFOPLIST_FILE = CrawlerBase/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
@@ -425,10 +433,6 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				HEADER_SEARCH_PATHS = (
-					/usr/local/include/mysql,
-					/usr/local/include,
-				);
 				INFOPLIST_FILE = CrawlerBase/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";

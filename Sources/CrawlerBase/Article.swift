@@ -11,7 +11,7 @@ import MySQL
 
 
 extension Row {
-    struct Article: QueryRowResultType {
+    public struct Article: QueryRowResultType {
         let articleID: ArticleID // TODO: auto increment type
         let rssID: RSSID
         let title: String
@@ -20,7 +20,7 @@ extension Row {
         let description: String
         let publishedAt: NSDate
         
-        static func decodeRow(r: QueryRowResult) throws -> Article {
+        public static func decodeRow(r: QueryRowResult) throws -> Article {
             return try Article(articleID: r <| "article_id",
                                rssID: r <| "rss_id",
                                title: r <| "title",
@@ -35,7 +35,7 @@ extension Row {
 
 
 extension Row.Article: QueryParameterDictionaryType {
-    func queryParameter() throws -> QueryDictionary {
+    public func queryParameter() throws -> QueryDictionary {
         return QueryDictionary([
             //"article_id": "",
             "rss_id": rssID,
@@ -45,5 +45,24 @@ extension Row.Article: QueryParameterDictionaryType {
             "description": description,
             "published_at": publishedAt
             ])
+    }
+    
+    public func saveOrIgnore(conn: Connection) throws {
+        let status: QueryStatus = try conn.query("INSERT IGNORE INTO articles SET ? ", [self])
+    }
+}
+
+
+
+extension Row.Article {
+    
+    public static func makeForInsert(rss: RSSFetcher.Article, forRSSID: RSSID) -> Row.Article {
+        return Row.Article(articleID: ArticleID(0),
+                           rssID: forRSSID,
+                           title: rss.title,
+                           link: rss.link,
+                           guid: rss.link.absoluteString,
+                             description: rss.description,
+                             publishedAt: rss.publishedAt)
     }
 }

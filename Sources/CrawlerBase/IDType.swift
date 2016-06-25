@@ -9,16 +9,16 @@
 import Foundation
 import MySQL
 
-struct RSSID: IDType {
-    let id: Int
-    init(_ id: Int) {
+public struct RSSID: IDType {
+    public let id: Int
+    public init(_ id: Int) {
         self.id = id
     }
 }
 
-struct ArticleID: IDType {
-    let id: Int
-    init(_ id: Int) {
+public struct ArticleID: IDType {
+    public let id: Int
+    public init(_ id: Int) {
         self.id = id
     }
 }

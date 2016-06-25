@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52411E641D1ECF2D008BB970 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411E631D1ECF2D008BB970 /* main.swift */; };
+		52411E771D1ECF86008BB970 /* CrawlerBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411E741D1ECF4A008BB970 /* CrawlerBase.framework */; };
+		52411E781D1ECF89008BB970 /* CrawlerConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411E6B1D1ECF45008BB970 /* CrawlerConfig.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52411E6A1D1ECF45008BB970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52411E651D1ECF44008BB970 /* CrawlerConfig.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52411E201D1ECD60008BB970;
+			remoteInfo = CrawlerConfig;
+		};
+		52411E6C1D1ECF45008BB970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52411E651D1ECF44008BB970 /* CrawlerConfig.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52411E2A1D1ECD60008BB970;
+			remoteInfo = CrawlerConfigTests;
+		};
+		52411E731D1ECF4A008BB970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52411E6E1D1ECF4A008BB970 /* CrawlerBase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 522115F31D1EA4E800199B76;
+			remoteInfo = CrawlerBase;
+		};
+		52411E751D1ECF4A008BB970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52411E6E1D1ECF4A008BB970 /* CrawlerBase.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 522115FD1D1EA4E800199B76;
+			remoteInfo = CrawlerBaseTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52411E531D1ECED1008BB970 /* RSSCrawler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSCrawler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52411E581D1ECED1008BB970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52411E631D1ECF2D008BB970 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		52411E651D1ECF44008BB970 /* CrawlerConfig.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CrawlerConfig.xcodeproj; path = ../CrawlerConfig/CrawlerConfig.xcodeproj; sourceTree = "<group>"; };
+		52411E6E1D1ECF4A008BB970 /* CrawlerBase.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CrawlerBase.xcodeproj; path = ../CrawlerBase/CrawlerBase.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52411E511D1ECED1008BB970 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52411E781D1ECF89008BB970 /* CrawlerConfig.framework in Frameworks */,
+				52411E771D1ECF86008BB970 /* CrawlerBase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52411E4B1D1ECED1008BB970 = {
+			isa = PBXGroup;
+			children = (
+				52411E6E1D1ECF4A008BB970 /* CrawlerBase.xcodeproj */,
+				52411E651D1ECF44008BB970 /* CrawlerConfig.xcodeproj */,
+				52411E551D1ECED1008BB970 /* RSSCrawler */,
+				52411E541D1ECED1008BB970 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52411E541D1ECED1008BB970 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52411E531D1ECED1008BB970 /* RSSCrawler.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52411E551D1ECED1008BB970 /* RSSCrawler */ = {
+			isa = PBXGroup;
+			children = (
+				52411E621D1ECF22008BB970 /* RSSCrawler */,
+				52411E581D1ECED1008BB970 /* Info.plist */,
+			);
+			path = RSSCrawler;
+			sourceTree = "<group>";
+		};
+		52411E621D1ECF22008BB970 /* RSSCrawler */ = {
+			isa = PBXGroup;
+			children = (
+				52411E631D1ECF2D008BB970 /* main.swift */,
+			);
+			name = RSSCrawler;
+			path = ../../../Sources/RSSCrawler;
+			sourceTree = "<group>";
+		};
+		52411E661D1ECF44008BB970 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52411E6B1D1ECF45008BB970 /* CrawlerConfig.framework */,
+				52411E6D1D1ECF45008BB970 /* CrawlerConfigTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52411E6F1D1ECF4A008BB970 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52411E741D1ECF4A008BB970 /* CrawlerBase.framework */,
+				52411E761D1ECF4A008BB970 /* CrawlerBaseTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52411E521D1ECED1008BB970 /* RSSCrawler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52411E5B1D1ECED1008BB970 /* Build configuration list for PBXNativeTarget "RSSCrawler" */;
+			buildPhases = (
+				52411E501D1ECED1008BB970 /* Sources */,
+				52411E511D1ECED1008BB970 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RSSCrawler;
+			productName = RSSCrawler;
+			productReference = 52411E531D1ECED1008BB970 /* RSSCrawler.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52411E4C1D1ECED1008BB970 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Yusuke Ito";
+				TargetAttributes = {
+					52411E521D1ECED1008BB970 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 52411E4F1D1ECED1008BB970 /* Build configuration list for PBXProject "RSSCrawler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 52411E4B1D1ECED1008BB970;
+			productRefGroup = 52411E541D1ECED1008BB970 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 52411E6F1D1ECF4A008BB970 /* Products */;
+					ProjectRef = 52411E6E1D1ECF4A008BB970 /* CrawlerBase.xcodeproj */;
+				},
+				{
+					ProductGroup = 52411E661D1ECF44008BB970 /* Products */;
+					ProjectRef = 52411E651D1ECF44008BB970 /* CrawlerConfig.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				52411E521D1ECED1008BB970 /* RSSCrawler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		52411E6B1D1ECF45008BB970 /* CrawlerConfig.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CrawlerConfig.framework;
+			remoteRef = 52411E6A1D1ECF45008BB970 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52411E6D1D1ECF45008BB970 /* CrawlerConfigTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CrawlerConfigTests.xctest;
+			remoteRef = 52411E6C1D1ECF45008BB970 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52411E741D1ECF4A008BB970 /* CrawlerBase.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CrawlerBase.framework;
+			remoteRef = 52411E731D1ECF4A008BB970 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52411E761D1ECF4A008BB970 /* CrawlerBaseTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CrawlerBaseTests.xctest;
+			remoteRef = 52411E751D1ECF4A008BB970 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52411E501D1ECED1008BB970 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52411E641D1ECF2D008BB970 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		52411E591D1ECED1008BB970 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		52411E5A1D1ECED1008BB970 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		52411E5C1D1ECED1008BB970 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RSSCrawler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.RSSCrawler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		52411E5D1D1ECED1008BB970 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = RSSCrawler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.RSSCrawler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52411E4F1D1ECED1008BB970 /* Build configuration list for PBXProject "RSSCrawler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52411E591D1ECED1008BB970 /* Debug */,
+				52411E5A1D1ECED1008BB970 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52411E5B1D1ECED1008BB970 /* Build configuration list for PBXNativeTarget "RSSCrawler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52411E5C1D1ECED1008BB970 /* Debug */,
+				52411E5D1D1ECED1008BB970 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52411E4C1D1ECED1008BB970 /* Project object */;
+}
