@@ -9,12 +9,12 @@
 import Foundation
 import MySQL
 
-enum URLError: ErrorProtocol {
+public enum URLError: ErrorProtocol {
     case invalidURLString(String)
 }
 
 extension NSURL {
-    static func from(string: String) throws -> NSURL {
+    public static func from(string: String) throws -> NSURL {
         guard let url = NSURL(string: string) else {
             throw URLError.invalidURLString(string)
         }
@@ -25,10 +25,10 @@ extension NSURL {
 public enum Row {
     
     public struct RSS: QueryRowResultType {
-        let rssID: RSSID // TODO: auto increment type
-        let title: String
+        public let rssID: RSSID // TODO: auto increment type
+        public let title: String
         public let url: NSURL
-        let createdAt: NSDate
+        public let createdAt: NSDate
         public static func decodeRow(r: QueryRowResult) throws -> RSS {
             return try RSS(rssID: r <| "rss_id",
                            title: r <| "title",
@@ -64,6 +64,19 @@ extension Row.RSS {
             throw Error.noRSS(rssID)
         }
         return first
+    }
+    
+    public static func fetchAll(pool: ConnectionPool) throws -> [Row.RSS] {
+        return try pool.execute { conn in
+            try conn.query("SELECT rss_id,title,url,created_at FROM rss")
+        }
+    }
+    
+    public static func createNew(title: String, url: NSURL, pool: ConnectionPool) throws {
+        try pool.execute { conn in
+            let rss = Row.RSS(rssID: RSSID(0), title: title, url: url, createdAt: NSDate())
+            try conn.query("INSERT INTO rss SET ?", [rss])
+        }
     }
 }
 

@@ -15,6 +15,9 @@
 		52411EDB1D1F50E2008BB970 /* CrawlerConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411ED91D1F50D9008BB970 /* CrawlerConfig.framework */; };
 		52411EE81D1F661C008BB970 /* RSSNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EE71D1F661C008BB970 /* RSSNewViewController.swift */; };
 		52411EEA1D1F6625008BB970 /* RSSListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EE91D1F6625008BB970 /* RSSListViewController.swift */; };
+		52411EEC1D1F6733008BB970 /* RSS.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52411EEB1D1F6733008BB970 /* RSS.storyboard */; };
+		52CE14201D1F685100F30149 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE141F1D1F685100F30149 /* ArticleListViewController.swift */; };
+		52CE142D1D1F697300F30149 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CE142C1D1F697300F30149 /* Context.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		52411ED41D1F50D9008BB970 /* CrawlerConfig.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CrawlerConfig.xcodeproj; path = ../CrawlerConfig/CrawlerConfig.xcodeproj; sourceTree = "<group>"; };
 		52411EE71D1F661C008BB970 /* RSSNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSNewViewController.swift; sourceTree = "<group>"; };
 		52411EE91D1F6625008BB970 /* RSSListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSListViewController.swift; sourceTree = "<group>"; };
+		52411EEB1D1F6733008BB970 /* RSS.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RSS.storyboard; sourceTree = "<group>"; };
+		52CE141F1D1F685100F30149 /* ArticleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
+		52CE142C1D1F697300F30149 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +96,11 @@
 			children = (
 				52411EDC1D1F512B008BB970 /* ViewControllers */,
 				52411EB61D1F50A1008BB970 /* AppDelegate.swift */,
+				52CE142C1D1F697300F30149 /* Context.swift */,
 				52411EB81D1F50A1008BB970 /* ViewController.swift */,
 				52411EBA1D1F50A1008BB970 /* Assets.xcassets */,
 				52411EBC1D1F50A1008BB970 /* Main.storyboard */,
+				52411EEB1D1F6733008BB970 /* RSS.storyboard */,
 				52411EBF1D1F50A1008BB970 /* Info.plist */,
 			);
 			path = RSSManager;
@@ -120,6 +128,7 @@
 			children = (
 				52411EE71D1F661C008BB970 /* RSSNewViewController.swift */,
 				52411EE91D1F6625008BB970 /* RSSListViewController.swift */,
+				52CE141F1D1F685100F30149 /* ArticleListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -217,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52411EBB1D1F50A1008BB970 /* Assets.xcassets in Resources */,
+				52411EEC1D1F6733008BB970 /* RSS.storyboard in Resources */,
 				52411EBE1D1F50A1008BB970 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +240,8 @@
 			files = (
 				52411EB91D1F50A1008BB970 /* ViewController.swift in Sources */,
 				52411EEA1D1F6625008BB970 /* RSSListViewController.swift in Sources */,
+				52CE14201D1F685100F30149 /* ArticleListViewController.swift in Sources */,
+				52CE142D1D1F697300F30149 /* Context.swift in Sources */,
 				52411EB71D1F50A1008BB970 /* AppDelegate.swift in Sources */,
 				52411EE81D1F661C008BB970 /* RSSNewViewController.swift in Sources */,
 			);

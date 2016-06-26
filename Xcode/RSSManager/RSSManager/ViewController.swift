@@ -16,3 +16,19 @@ class ViewController: NSViewController {
     }
 }
 
+extension NSViewController {
+    
+    func presentError(title: String, error: ErrorProtocol?) {
+        let errMessage: String
+        if let errObj = error {
+            errMessage = "\n\(errObj)"
+        } else {
+            errMessage = ""
+        }
+        
+        let err = NSError(domain: "", code: -1, userInfo: [
+            NSLocalizedDescriptionKey as NSObject: "\(title)\(errMessage)" as AnyObject
+            ])
+        self.presentError(err as NSError)
+    }
+}
