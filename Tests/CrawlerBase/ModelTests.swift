@@ -122,4 +122,8 @@ class ModelTests: XCTestCase {
             XCTAssertEqual(rssIDs[0], RSSID(1))
         }
     }
+    
+    func testArticleInsert() throws {
+        // TODO: implement me
+    }
 }

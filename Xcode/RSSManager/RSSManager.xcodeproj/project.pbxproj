@@ -13,6 +13,8 @@
 		52411EBE1D1F50A1008BB970 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52411EBC1D1F50A1008BB970 /* Main.storyboard */; };
 		52411EDA1D1F50E2008BB970 /* CrawlerBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411ED11D1F50D2008BB970 /* CrawlerBase.framework */; };
 		52411EDB1D1F50E2008BB970 /* CrawlerConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52411ED91D1F50D9008BB970 /* CrawlerConfig.framework */; };
+		52411EE81D1F661C008BB970 /* RSSNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EE71D1F661C008BB970 /* RSSNewViewController.swift */; };
+		52411EEA1D1F6625008BB970 /* RSSListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EE91D1F6625008BB970 /* RSSListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		52411EBF1D1F50A1008BB970 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52411ECB1D1F50D2008BB970 /* CrawlerBase.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CrawlerBase.xcodeproj; path = ../CrawlerBase/CrawlerBase.xcodeproj; sourceTree = "<group>"; };
 		52411ED41D1F50D9008BB970 /* CrawlerConfig.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CrawlerConfig.xcodeproj; path = ../CrawlerConfig/CrawlerConfig.xcodeproj; sourceTree = "<group>"; };
+		52411EE71D1F661C008BB970 /* RSSNewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSNewViewController.swift; sourceTree = "<group>"; };
+		52411EE91D1F6625008BB970 /* RSSListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 		52411EDC1D1F512B008BB970 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				52411EE71D1F661C008BB970 /* RSSNewViewController.swift */,
+				52411EE91D1F6625008BB970 /* RSSListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -223,7 +229,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				52411EB91D1F50A1008BB970 /* ViewController.swift in Sources */,
+				52411EEA1D1F6625008BB970 /* RSSListViewController.swift in Sources */,
 				52411EB71D1F50A1008BB970 /* AppDelegate.swift in Sources */,
+				52411EE81D1F661C008BB970 /* RSSNewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
