@@ -20,6 +20,8 @@
 		52411EA41D1F4DAE008BB970 /* HTTPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EA21D1F4DAE008BB970 /* HTTPTests.swift */; };
 		52411EA51D1F4DAE008BB970 /* RSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EA31D1F4DAE008BB970 /* RSSTests.swift */; };
 		52411EA91D1F4EE6008BB970 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EA81D1F4EE6008BB970 /* XCTestManifests.swift */; };
+		52411EDF1D1F5858008BB970 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EDE1D1F5858008BB970 /* ModelTests.swift */; };
+		52411EE61D1F5A0E008BB970 /* DBScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52411EE51D1F5A0E008BB970 /* DBScheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		52411EA31D1F4DAE008BB970 /* RSSTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSTests.swift; sourceTree = "<group>"; };
 		52411EA61D1F4E7B008BB970 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LinuxMain.swift; path = ../../../Tests/LinuxMain.swift; sourceTree = "<group>"; };
 		52411EA81D1F4EE6008BB970 /* XCTestManifests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		52411EDE1D1F5858008BB970 /* ModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		52411EE51D1F5A0E008BB970 /* DBScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBScheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,8 @@
 				52411EA81D1F4EE6008BB970 /* XCTestManifests.swift */,
 				52411EA21D1F4DAE008BB970 /* HTTPTests.swift */,
 				52411EA31D1F4DAE008BB970 /* RSSTests.swift */,
+				52411EDE1D1F5858008BB970 /* ModelTests.swift */,
+				52411EE51D1F5A0E008BB970 /* DBScheme.swift */,
 			);
 			name = CrawlerBase;
 			path = ../../../Tests/CrawlerBase;
@@ -370,7 +376,9 @@
 			files = (
 				52411EA51D1F4DAE008BB970 /* RSSTests.swift in Sources */,
 				52411EA41D1F4DAE008BB970 /* HTTPTests.swift in Sources */,
+				52411EE61D1F5A0E008BB970 /* DBScheme.swift in Sources */,
 				52411EA91D1F4EE6008BB970 /* XCTestManifests.swift in Sources */,
+				52411EDF1D1F5858008BB970 /* ModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

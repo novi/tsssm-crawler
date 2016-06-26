@@ -1,10 +1,10 @@
 import XCTest
-import CrawlerBaseSuite
+import CrawlerBaseTestSuite
 
 
 var tests = [XCTestCaseEntry]()
 
-tests += CrawlerBaseSuite.allTests()
+tests += CrawlerBaseTestSuite.allTests()
 //tests += .allTests()
 
 XCTMain(tests)

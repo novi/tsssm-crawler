@@ -13,6 +13,7 @@ import XCTest
         return [
             testCase( HTTPTests.allTests ),
             testCase( RSSTests.allTests ),
+            testCase( ModelTests.allTests )
         ]
     }
 #endif
