@@ -1,6 +1,3 @@
-[submodule "External/MySQL"]
-	path = External/MySQL
-	url = git@github.com:novi/mysql-swift.git
 [submodule "External/BlueSocket"]
 	path = External/BlueSocket
 	url = https://github.com/IBM-Swift/BlueSocket.git
