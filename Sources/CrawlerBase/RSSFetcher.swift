@@ -56,3 +56,16 @@ extension RSSFetcher {
         }
     }
 }
+
+#if !os(OSX)
+extension NSXMLDocument {
+    convenience init(xmlString string: String, options mask: Int) throws {
+        try self.init(XMLString: string, options: mask)
+    }
+}
+extension NSXMLElement {
+    func elements(forName name: String) -> [NSXMLElement] {
+        return elementsForName(name)
+    }
+}
+#endif
