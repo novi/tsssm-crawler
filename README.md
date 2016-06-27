@@ -6,6 +6,8 @@
 
 [Tokyo Server-Side Swift Meetup #4](http://tokyo-ss-swift.connpass.com/event/33727/) のデモコードです。
 
+RSSのクローラーをサーバーサイドSwiftで実装し、同時に同じコードを共有して、設定とビューワーのAppもCocoaで作っています。
+
 ## 準備 (OS X)
 
 ローカル環境にMySQL(MariaDB)が必要です。
