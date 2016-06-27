@@ -8,6 +8,7 @@
 
 import Foundation
 import MySQL
+import SQLFormatter
 
 public struct RSSID: IDType {
     public let id: Int
@@ -22,3 +23,5 @@ public struct ArticleID: IDType {
         self.id = id
     }
 }
+
+

@@ -51,7 +51,7 @@ final class RSSListViewController: NSViewController, NSTableViewDelegate, NSTabl
         
         switch column {
         case .ID:
-            view.textField?.stringValue = "\(theRSS.rssID.id)"
+            view.textField?.stringValue = theRSS.rssID.description
         case .title:
             view.textField?.stringValue = theRSS.title
         case .url:
@@ -73,7 +73,7 @@ final class RSSListViewController: NSViewController, NSTableViewDelegate, NSTabl
             let vc = wc.contentViewController as? ArticleListViewController {
             if tableView.selectedRow >= 0 {
                 let theRSS = rss[tableView.selectedRow]
-                vc.rssID = theRSS.rssID
+                vc.rssID = theRSS.rssID.id
                 vc.title = "RSS ID:\(theRSS.rssID.id) \(theRSS.title)"
             }
         }

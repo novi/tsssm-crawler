@@ -12,7 +12,7 @@ import MySQL
 
 extension Row {
     public struct Article: QueryRowResultType {
-        public let articleID: ArticleID // TODO: auto increment type
+        public let articleID: AutoincrementID<ArticleID>
         public let rssID: RSSID
         public let title: String
         public let link: NSURL
@@ -37,7 +37,7 @@ extension Row {
 extension Row.Article: QueryParameterDictionaryType {
     public func queryParameter() throws -> QueryDictionary {
         return QueryDictionary([
-            //"article_id": "",
+            "article_id": articleID,
             "rss_id": rssID,
             "title": title,
             "link": link.absoluteString,
@@ -64,7 +64,7 @@ extension Row.Article {
     }
     
     public static func makeForInsert(rss: RSSFetcher.Article, forRSSID: RSSID) -> Row.Article {
-        return Row.Article(articleID: ArticleID(0),
+        return Row.Article(articleID: .noID,
                            rssID: forRSSID,
                            title: rss.title,
                            link: rss.link,
