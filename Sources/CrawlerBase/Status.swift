@@ -16,7 +16,7 @@ extension Row {
         case failure = "failure"
     }
     
-    public enum LatestStatus {
+    public enum LatestStatus: CustomStringConvertible {
         case success
         case failure(String)
         init(status: LatestStatus_, errorMessage: String) {
@@ -45,13 +45,19 @@ extension Row {
             case .failure: return NSDate(timeIntervalSinceNow: 3600*24) // a day after
             }
         }
+        public var description: String {
+            switch self {
+            case .success: return "success"
+            case .failure(let message): return "failure:\(message)"
+            }
+        }
     }
     
     public struct CollectStatus: QueryRowResultType {
-        let rssID: RSSID
-        let latestStatus: LatestStatus
-        let latestStatusAt: NSDate
-        let nextUpdate: NSDate
+        public let rssID: RSSID
+        public let latestStatus: LatestStatus
+        public let latestStatusAt: NSDate
+        public let nextUpdate: NSDate
         public static func decodeRow(r: QueryRowResult) throws -> CollectStatus {
             return try CollectStatus(rssID: r <| "rss_id",
                                  latestStatus: LatestStatus(status: r <| "latest_status",
@@ -69,6 +75,13 @@ extension Row.CollectStatus {
         static func decodeRow(r: QueryRowResult) throws -> RSSIDResult {
             return try RSSIDResult(rssID: r <| "rss_id")
         }
+    }
+    
+    public static func fetch(byRSS rssID: RSSID, pool: ConnectionPool) throws -> Row.CollectStatus? {
+        let statuses:[Row.CollectStatus] = try pool.execute{ conn in
+            try conn.query("SELECT rss_id,latest_status,error_message,latest_status_at,next_updates FROM collect_status WHERE rss_id = ? LIMIT 1", [rssID])
+        }
+        return statuses.first
     }
     
     public static func fetchOutdated(pool: ConnectionPool) throws -> [RSSID] {

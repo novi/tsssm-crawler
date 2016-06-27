@@ -12,13 +12,13 @@ import MySQL
 
 extension Row {
     public struct Article: QueryRowResultType {
-        let articleID: ArticleID // TODO: auto increment type
-        let rssID: RSSID
-        let title: String
-        let link: NSURL
+        public let articleID: ArticleID // TODO: auto increment type
+        public let rssID: RSSID
+        public let title: String
+        public let link: NSURL
         let guid: String
-        let description: String
-        let publishedAt: NSDate
+        public let description: String
+        public let publishedAt: NSDate
         
         public static func decodeRow(r: QueryRowResult) throws -> Article {
             return try Article(articleID: r <| "article_id",
@@ -56,6 +56,12 @@ extension Row.Article: QueryParameterDictionaryType {
 
 
 extension Row.Article {
+    
+    public static func fetchArticles(byRSS rssID: RSSID, pool: ConnectionPool) throws -> [Row.Article] {
+        return try pool.execute { conn in
+            try conn.query("SELECT article_id,rss_id,title,link,guid,description,published_at FROM articles WHERE rss_id = ? ORDER BY article_id DESC;", [rssID])
+        }
+    }
     
     public static func makeForInsert(rss: RSSFetcher.Article, forRSSID: RSSID) -> Row.Article {
         return Row.Article(articleID: ArticleID(0),

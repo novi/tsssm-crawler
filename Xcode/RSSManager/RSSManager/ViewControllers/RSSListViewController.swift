@@ -30,6 +30,8 @@ final class RSSListViewController: NSViewController, NSTableViewDelegate, NSTabl
         }
     }
     
+    // MARK: Table View
+    
     func numberOfRows(in tableView: NSTableView) -> Int {
         return rss.count
     }
@@ -61,10 +63,19 @@ final class RSSListViewController: NSViewController, NSTableViewDelegate, NSTabl
         return view
     }
     
+    // MARK: Segue
+    
     override func prepare(for segue: NSStoryboardSegue, sender: AnyObject?) {
         if let newVc = segue.destinationController as? RSSNewViewController {
             print(newVc)
             newVc.delegate = self
+        } else if let wc = segue.destinationController as? NSWindowController,
+            let vc = wc.contentViewController as? ArticleListViewController {
+            if tableView.selectedRow >= 0 {
+                let theRSS = rss[tableView.selectedRow]
+                vc.rssID = theRSS.rssID
+                vc.title = "RSS ID:\(theRSS.rssID.id) \(theRSS.title)"
+            }
         }
     }
     
@@ -72,6 +83,9 @@ final class RSSListViewController: NSViewController, NSTableViewDelegate, NSTabl
         fetchData()
     }
     
+    @IBAction func reloadClicked(_ sender: AnyObject) {
+        fetchData()
+    }
     
 }
 
