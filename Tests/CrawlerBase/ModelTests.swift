@@ -41,7 +41,7 @@ class ModelTests: XCTestCase {
     
     func insertOneRSS() throws {
         let now = NSDate()
-        let rss = Row.RSS(rssID: RSSID(0), title: "my rss", url: NSURL(string: "https://apple.com")!, createdAt: now)
+        let rss = Row.RSS(rssID: .noID, title: "my rss", url: NSURL(string: "https://apple.com")!, createdAt: now)
         
         try pool.execute { conn in
             let rssInsert: QueryStatus = try conn.query("INSERT INTO rss SET ? ", [rss])

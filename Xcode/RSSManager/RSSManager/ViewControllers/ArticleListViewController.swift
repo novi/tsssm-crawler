@@ -73,7 +73,7 @@ final class ArticleListViewController: NSViewController, NSTableViewDelegate, NS
         
         switch column {
         case .ID:
-            view.textField?.stringValue = "\(article.articleID.id)"
+            view.textField?.stringValue = article.articleID.description
         case .title:
             view.textField?.stringValue = article.title
         case .link:

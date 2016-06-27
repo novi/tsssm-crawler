@@ -25,7 +25,7 @@ extension NSURL {
 public enum Row {
     
     public struct RSS: QueryRowResultType {
-        public let rssID: RSSID // TODO: auto increment type
+        public let rssID: AutoincrementID<RSSID>
         public let title: String
         public let url: NSURL
         public let createdAt: NSDate
@@ -42,7 +42,7 @@ public enum Row {
 extension Row.RSS: QueryParameterDictionaryType {
     public func queryParameter() throws -> QueryDictionary {
         return QueryDictionary([
-            //"rss_id": rssID, auto increment
+            "rss_id": rssID,
             "title": title,
             "url": url.absoluteString,
             "created_at": createdAt
@@ -74,7 +74,7 @@ extension Row.RSS {
     
     public static func createNew(title: String, url: NSURL, pool: ConnectionPool) throws {
         try pool.execute { conn in
-            let rss = Row.RSS(rssID: RSSID(0), title: title, url: url, createdAt: NSDate())
+            let rss = Row.RSS(rssID: .noID, title: title, url: url, createdAt: NSDate())
             try conn.query("INSERT INTO rss SET ?", [rss])
         }
     }
