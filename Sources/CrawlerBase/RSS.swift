@@ -75,7 +75,7 @@ extension Row.RSS {
     public static func createNew(title: String, url: NSURL, pool: ConnectionPool) throws {
         try pool.execute { conn in
             let rss = Row.RSS(rssID: .noID, title: title, url: url, createdAt: NSDate())
-            try conn.query("INSERT INTO rss SET ?", [rss])
+            let _: QueryStatus = try conn.query("INSERT INTO rss SET ?", [rss])
         }
     }
 }

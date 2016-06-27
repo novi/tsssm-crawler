@@ -34,6 +34,10 @@ public enum AutoincrementID<I: IDType> {
         case .ID(let id): return id
         }
     }
+    
+    mutating func replaceWith(id: I) {
+        self = .ID(id)
+    }
 }
 
 extension AutoincrementID: CustomStringConvertible {
