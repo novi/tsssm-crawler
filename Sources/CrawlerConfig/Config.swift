@@ -15,6 +15,7 @@ struct LocalDB: ConnectionOption {
     let user: String = "root"
     let password: String = ""
     let database: String = "crawler_demo"
+    let encoding: Connection.Encoding = .UTF8MB4
 }
 
 public struct Config {
